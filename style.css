@@ -1,0 +1,967 @@
+@font-face {
+    font-family: montbold;
+    src: url(/font/Montserrat-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(/font/montserrat-regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* cursor: none; */
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#navbar{
+    width: 100%;
+    height: 10vw;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    position: fixed;
+    padding: 2vw 5vw;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#navbar img{
+    height: 5vw;
+    width: max-content;
+}
+
+#navbar h4 {
+    font-family: montserrat;
+    font-size: 1.1vw;
+    font-weight: 100;
+    cursor: pointer;
+    white-space: nowrap;
+}
+#navbar h4:hover{
+    color: #aada25;
+}
+
+button {
+    font-size: 1.2vw;
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: 3px solid #95C11E;
+    background-color: transparent;
+    background-color: black;
+    margin: 1px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    flex-shrink: 0;
+}
+button .circle{
+    /* padding: 20px; */
+    width: 100%;
+    background-color: #9ECD1F;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: scale .5s ease;
+    z-index: -1;
+}
+button .circle2{
+    top: 0;
+    width: 60%;
+    position: relative;
+    background-color: transparent;
+    border: 12px solid #2cc11e;
+}
+button:hover .circle{
+    /* top: 0; */
+    scale: 2;
+}
+button:hover{
+    color: black;
+}
+body>video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+}
+
+.cursor {
+    background-color: #aada25;
+    height: 20px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    top: -30%;
+    left: 50%;
+    box-shadow: 0px 0px 200px 100px #96c11e6a;
+    transition: box-shadow ease 1s;
+    transition: height ease .5s;
+    pointer-events: none;
+}
+#main {
+    background-color: rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1vw;
+    position: relative;
+}
+
+#page1 h1 {
+    font-family: montbold;
+    font-size: 8vw;
+    font-weight: 900;
+    position: relative;
+    z-index: 5;
+}
+
+#page1 h1::before {
+    content: "EAT. DRINK. PLAY.";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-text-stroke: 1.5px #95C11E;
+    color: black;
+    left: -.7%;
+    top: -2.5%;
+    z-index: -1;
+}
+
+#page1 h3 {
+    font-family: montbold;
+    font-size: 2vw;
+    font-weight: 700;
+}
+
+#page1 p {
+    font-family: montserrat;
+    width: 100%;
+    font-size: 1.3vw;
+    font-weight: 100;
+    line-height: 1.5vw;
+}
+
+#page2 {
+    width: 100%;
+}
+
+.scroller {
+    width: 100%;
+    display: flex;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 10;
+}
+
+.scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.scroller1 {
+    display: flex;
+    align-items: center;
+    animation: scroller 30s linear infinite;
+}
+
+.scroller1 h4 {
+    color: transparent;
+    -webkit-text-stroke: 2px #95C11E;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    transition: color ease .3s;
+    padding: 1vw;
+    color: black;
+}
+
+.scroller1 h4:hover {
+    color: #95C11E;
+}
+
+@keyframes scroller {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#page2 .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw 5vw 10vw;
+    text-align: center;
+    gap: 2vw;
+}
+
+.container h1 {
+    font-size: 3.5vw;
+    font-family: montbold;
+    font-weight: 900;
+}
+
+.centerbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.centerbox img {
+    width: 10vw;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 10px;
+    filter: brightness(.7);
+}
+
+.centerbox #img1 {
+    margin-top: 4vw;
+}
+
+.centerbox #img2 {
+    aspect-ratio: 1.1/1.5;
+}
+
+.centerbox p {
+    width: 55%;
+    font-size: 1.5vw;
+    font-weight: 200;
+    line-height: 3vw;
+}
+
+.container h5 {
+    font-size: 1.5vw;
+    font-weight: 200;
+    line-height: 2.5vw;
+}
+
+#page3 {
+    width: 100%;
+    padding: 0vw 8vw 5vw;
+    display: flex;
+    gap: 4vw;
+}
+.courses {
+    width: 25vw;
+    height: 75vh;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+
+    background-image: url(/img/home-toptracer.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.courses img{
+    width: 13vw;
+    position: absolute;
+    left: -5%;
+    top: -10%;
+    z-index: -1;
+}
+.courses1 {
+    background-image: url(/img/hero-4.avif);
+}
+
+.courses2 {
+    background-image: url(/img/home-lessons.avif);
+}
+
+.courses>h1 {
+    color: white !important;
+    position: absolute;
+    bottom: 5%;
+    left: 40%;
+    transform: translate(-50%);
+    z-index: -1;
+}
+
+.courses>h1 span {
+    white-space: nowrap;
+    font-size: 1.5vw;
+    font-weight: 900;
+}
+
+.courses .overlay {
+    padding: 8vw 2vw 2vw;
+    height: 100%;
+    width: 100%;
+    background-color: #aada25;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity ease .4s;
+    cursor: pointer;
+}
+
+.courses:hover .overlay {
+    opacity: 1;
+}
+
+.courses h1 {
+    color: black;
+    font-family: montbold;
+    font-size: 2.2vw;
+}
+
+.courses p {
+    margin-top: 10px;
+    color: black;
+    font-family: montserrat;
+    font-size: 1.3vw;
+    line-height: 2.1vw;
+}
+
+#greenband {
+    padding: 1vw;
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background: linear-gradient(to bottom left, #34A636, #84cd1f, #afe027);
+    overflow: hidden;
+}
+
+#greenband img {
+    width: 13vw;
+    height: 50vh;
+    object-fit: cover;
+    opacity: .4;
+}
+
+#greenband #dots1 {
+    rotate: 180deg;
+}
+
+#greenband h1 {
+    font-family: montbold;
+    color: black;
+    font-size: 1.8vw;
+}
+
+#page4 {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    gap: 8vw;
+    padding: 9vw;
+    position: relative;
+}
+
+.swiper{
+    /* background-color: lightpink; */
+    width: 40vw;
+    height: 28vw;
+    border-radius: 10px;
+    flex-shrink: 0;
+    box-shadow: 0px 0px 500px #96c11e59;
+    position: relative;
+}
+
+.swiper-slide {
+    height: 100%;
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    background: #ffffff42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.custom-pagination{
+    left: -20% !important;
+    bottom: 20% !important;
+    /* background-color: rgba(255, 255, 255, 0.27) ; */
+}
+.custom-pagination .swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    margin: 0 15px !important;
+    position: relative;
+    background-color: #fff;
+    opacity: 1;
+    border: none !important;
+}
+.custom-pagination .swiper-pagination-bullet-active{
+    background-color: #95C11E;
+}
+.swiper-pagination-bullet:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.swiper-pagination-bullet-active:after {
+    border:  .5px solid #95C11E;
+    scale: 3;
+    transition: scale .6s ease;
+}
+#page4>img{
+    width: 11vw;
+    position: absolute;
+    bottom: 19%;
+    z-index: 0;
+}
+.righttext {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2vw;
+}
+
+.righttext h1 {
+    font-family: montbold;
+    font-size: 3vw;
+}
+
+.righttext p {
+    font-family: montserrat;
+    font-size: 1.5vw;
+    font-weight: 100;
+    width: 99%;
+    line-height: 2.5vw;
+}
+
+.righttext button {
+    font-size: 1.2vw;
+    padding: 12px 32px;
+    border-radius: 30px;
+    border: 3px solid #95C11E;
+    background-color: transparent;
+    background-color: black;
+    font-family: montserrat;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+#page5 {
+    width: 100%;
+    overflow-x: hidden;
+    padding-top: 1vw;
+}
+
+#page5 .scroller-img {
+    width: 100%;
+    height: 30vw;
+    transform: rotate(-3deg);
+    padding: 2vw 0vw;
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+#page5 .scroller-img::-webkit-scrollbar {
+    display: none;
+}
+
+.scroller-part1 {
+    width: max-content;
+    height: 100%;
+    display: flex;
+    gap: 2vw;
+}
+
+.scroller-img h2{
+    position: absolute;
+    bottom: -5%;
+    right: 10%;
+    font-family: montbold;
+    font-weight: 500;
+}
+
+.imgbox {
+    flex-shrink: 0;
+    width: 18vw;
+    height: 100%;
+    border-radius: 20px;
+    background-color: lightpink;
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/sb-instagram-feed-images/410312010_1018282949255327_4393144909964156778_nlow.jpg?strip=all&lossy=1&sharp=1&w=1920&ssl=1);
+    background-position: center;
+    background-size: cover;
+}
+#page5 h2, #page5 i{
+    cursor: pointer;
+}
+#page5 h2:hover i,#page5 h2:hover{
+    color: #95C11E;
+}
+.imgbox2 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/sb-instagram-feed-images/404039181_718850036784820_4765651772070395370_nlow.jpg?strip=all&lossy=1&sharp=1&w=1920&ssl=1);
+}
+
+.imgbox3 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/sb-instagram-feed-images/398418469_721465039317636_5282411946362859086_nlow.jpg?strip=all&lossy=1&sharp=1&w=1920&ssl=1);
+}
+
+.imgbox4 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/sb-instagram-feed-images/398120442_301907936024981_8729388087199383804_nlow.jpg?strip=all&lossy=1&sharp=1&w=1920&ssl=1);
+}
+
+.imgbox5 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/sb-instagram-feed-images/394623622_194832340313885_8020440471135078319_nlow.jpg?strip=all&lossy=1&sharp=1&w=1920&ssl=1);
+}
+
+.imgbox6 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/sb-instagram-feed-images/368194888_251352427805522_6998893509583014418_nlow.jpg?strip=all&lossy=1&sharp=1&w=1920&ssl=1);
+}
+
+.imgbox7 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/sb-instagram-feed-images/368428166_1337186660536892_7590551552041072954_nlow.jpg?strip=all&lossy=1&sharp=1&w=1920&ssl=1);
+}
+
+.imgbox8 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/sb-instagram-feed-images/367400769_833249714695130_4015145710790161559_nlow.jpg?strip=all&lossy=1&sharp=1&w=1920&ssl=1);
+}
+
+.imgbox9 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/sb-instagram-feed-images/366617442_631871452316419_3502790817763430680_nlow.jpg?strip=all&lossy=1&sharp=1&w=1920&ssl=1);
+}
+
+.imgbox10 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/sb-instagram-feed-images/412023628_889679102464655_5582334213767831040_nlow.jpg?strip=all&lossy=1&sharp=1&w=1920&ssl=1);
+}
+
+#page5 .textbox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 16vw;
+    padding-bottom: 10vw;
+    position: relative;
+    margin-bottom: 10vw;
+}
+
+.textbox h1 {
+    font-size: 1.8vw;
+    line-height: 2.7vw;
+    font-weight: 100;
+    width: 88%;
+    font-family: montbold;
+}
+
+#page5 .textbox img {
+    width: 55px;
+    position: absolute;
+}
+
+#comma1 {
+    left: 14%;
+    top: 30%;
+}
+
+#comma2 {
+    right: 12%;
+    bottom: 15%;
+}
+
+.lessons-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    padding-bottom: 5vw;
+    position: relative;
+}
+
+.lessons-div>h1 {
+    position: absolute;
+    top: -30%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 5vw;
+    color: black;
+    -webkit-text-stroke: 1px white;
+}
+
+.img-rect {
+    width: 25vw;
+    height: 10vw;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-rect h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #aada25;
+    color: black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: montbold;
+    font-size: 2vw;
+    transition: color ease .2s;
+    transition: background-color ease .2s;
+    z-index: 4;
+}
+
+.img-rect img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 1.1;
+    transition: scale ease .4s;
+}
+
+.img-rect:hover h1 {
+    color: white;
+    background-color: transparent;
+}
+
+.img-rect:hover img {
+    scale: 1;
+}
+
+#footer {
+    background: linear-gradient(to bottom left, #34A636, #9ECD1F, #9fcc23);
+    width: 100%;
+    /* height: 25vw; */
+    position: relative;
+    padding-bottom: 1.3vw;
+}
+
+#footer .row {
+    display: flex;
+    gap: 3.2vw;
+    padding: 5vw 8vw 4vw;
+}
+
+#footer .columns {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.columns img {
+    width: max-content;
+    height: 7vw;
+}
+
+.columns h2 {
+    font-family: montbold;
+    font-weight: 100;
+    color: black;
+    font-size: 1.8vw;
+    line-height: 2.5vw;
+    cursor: pointer;
+}
+
+.columns p {
+    font-weight: 400;
+    font-size: 1.35vw;
+    color: black;
+    padding-bottom: 5px;
+}
+
+.columns #direction {
+    font-weight: 100;
+    font-size: 1.5vw;
+}
+
+.column1 {
+    width: 15vw;
+    justify-content: space-between;
+}
+
+.column1 .icons {
+    margin-top: 5vw;
+}
+
+.column1 i {
+    color: black;
+    font-size: 2.5vw;
+}
+
+.column2 {
+    margin-left: -10%;
+}
+
+#footer>h6 {
+    color: black;
+    font-size: 1.05vw;
+    font-weight: 200;
+    font-family: montserrat;
+    padding-left: 10vw;
+}
+
+#footer>h5 {
+    color: black;
+    font-size: 1vw;
+    font-weight: 200;
+    font-family: montserrat;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+#footer h2:hover, #footer i:hover{
+    color: white !important;
+}
+
+::selection {
+    background-color: white;
+    color: #aada25;
+}
+
+body::-webkit-scrollbar {
+    width: 9px;
+    background-color: rgb(0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #95C11E;
+    border-radius: 10px;
+}
+@media(max-width : 600px){
+    #navbar{
+        height: 20vw;
+        padding: 0vw 5vw;
+        justify-content: space-between;
+    }
+    #navbar img{
+        height: max-content;
+        height: 12vw;
+        margin-top: 5vw;
+
+    }
+    #navbar h4{
+        display: none;
+    }
+    #golfbtn{
+        display: none;
+    }
+    button{
+       font-size: 2vw;
+       margin: 2vw 0vw;
+    }
+    #page1 h1{
+        font-size: 12vw;
+    }
+    #page1 h3{
+        font-size: 3.5vw;
+        margin: 3vw 0;
+    }
+    #page1 p{
+        font-size: 3.2vw;
+        line-height: 3.5vw;
+        width: 70%;
+        text-align: center;
+    }
+    .scroller h4{
+        font-size: 13vw;
+        -webkit-text-stroke: 1px #95C11E;
+
+    }
+    .container h1{
+        font-size: 8vw;
+    }
+    .centerbox img{
+        width: 15vw;
+    }
+    .centerbox p{
+        font-size: 3vw;
+        line-height: 5vw;
+    }
+    .container h5{
+        font-size: 3vw;
+        line-height: 4vw;
+    }
+    #page3{
+        flex-wrap: wrap;
+    }
+    .courses{
+        width: 100%;
+        text-align: center;
+    }
+    .courses>h1{
+        font-size: 8vw ;
+        left: 50%;
+    }
+    .courses .overlay{
+        text-align: center;
+        padding: 20vw 5vw;
+    }
+    .courses>h1 span{
+        font-size: 5vw;
+    }
+    .courses h1{
+        font-size: 6vw;
+        white-space: nowrap;
+    }
+    .courses p{
+        font-size: 5vw;
+        line-height: 6vw;
+    }
+    #greenband{
+        height: 50vw;
+    }
+    #greenband img{
+        height: 60vw ;
+    }
+    #greenband h1{
+        font-size: 3.2vw;
+    }
+    #page4{
+        flex-direction: column;
+        gap: 15vw;
+    }
+    .swiper{
+        width: 100%;
+        height: 45%;
+    }
+    .custom-pagination{
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%) !important;
+    }
+    .righttext{
+        width: 100%;
+        gap: 5vw;
+    }
+    .righttext h1{
+        font-size: 7vw;
+    }
+    .righttext p{
+        font-size: 4vw;
+        line-height: 5vw;
+    }
+    .righttext button{
+        font-size: 3vw;
+    }
+    #page5{
+        padding-top: 25vw;
+        padding-bottom: 5vw;
+    }
+    #page5 .scroller-img{
+        height: 40vw;
+    }
+    .imgbox{
+        width: 30vw;
+        border-radius: 10px;
+    }
+    .scroller-img h2{
+        bottom: -35%;
+    }
+    #page5 .textbox{
+        margin-top: 40vw;
+        margin-bottom: 40vw;
+    }
+    .textbox h1{
+        font-size: 3vw;
+        line-height: 4vw;
+    }
+    #comma1{
+        left: 12%;
+    }
+    #page5 .textbox img{
+        width: 30px;
+    }
+    .lessons-div{
+        flex-direction: column;
+    }
+    .lessons-div>h1 {
+        font-size: 5.5vw;
+        text-align: center;
+        top: -5%;
+    }
+    .img-rect{
+        width: 90%;
+        height: 35vw;
+    }
+    .img-rect h1 {
+        font-size: 5vw;
+    }
+    #footer .row{
+        flex-wrap: wrap;
+    }
+    #footer .columns {
+        width: 40vw;
+    }
+    .column1 .icons{
+        position: absolute;
+        bottom: 25%;
+    }
+    .column1 i {
+        font-size: 8vw;
+    }
+    .column2{
+        margin: 0;
+    }
+    .columns img{
+        height: 15vw;
+    }
+    .columns h2{
+        font-size: 4vw;
+        line-height: 5vw;
+    }
+    .columns p{
+        font-size: 3vw;
+    }
+    .columns #direction{
+        font-size: 3vw;
+    }
+    #footer>h6{
+        font-size: 2vw;
+        text-align: center;
+        padding: 5vw 2vw;
+    }
+    #footer>h5{
+        left: 50%;
+        bottom: 3%;
+        font-size: 2vw;
+        width: max-content;
+        transform: translate(-50%);
+    }
+}
