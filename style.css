@@ -274,8 +274,7 @@ body>video {
     border-radius: 20px;
     position: relative;
     z-index: 2;
-
-    background-image: url(/img/home-toptracer.jpeg);
+    background-image: url(/img/home-toptracer.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -289,11 +288,12 @@ body>video {
     z-index: -1;
 }
 .courses1 {
-    background-image: url(/img/hero-4.jpeg);
+    z-index: 1;
+    background-image: url(/img/hero-4.webp);
 }
 
 .courses2 {
-    background-image: url(/img/home-lessons.jpeg);
+    background-image: url(/img/home-lessons.webp);
 }
 
 .courses>h1 {
@@ -440,7 +440,7 @@ body>video {
     scale: 3;
     transition: scale .6s ease;
 }
-#page4>svg{
+#page4 svg{
     width: 11vw;
     position: absolute;
     bottom: 19%;
@@ -866,7 +866,7 @@ body::-webkit-scrollbar-thumb {
         flex-direction: column;
         gap: 15vw;
     }
-    #page4>svg{
+    #page4 svg{
         display: none;
     }
     .swiper{
