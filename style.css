@@ -768,7 +768,6 @@ body::-webkit-scrollbar-thumb {
         justify-content: space-between;
     }
     #navbar svg{
-        height: max-content;
         height: 12vw;
         margin-top: 5vw;
 
