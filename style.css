@@ -35,9 +35,10 @@ body {
     background-color: rgba(0, 0, 0, 0);
 }
 
-#navbar img{
+#navbar svg{
     height: 5vw;
     width: max-content;
+    cursor: pointer;
 }
 
 #navbar h4 {
@@ -274,7 +275,7 @@ body>video {
     position: relative;
     z-index: 2;
 
-    background-image: url(/img/home-toptracer.avif);
+    background-image: url(/img/home-toptracer.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -288,11 +289,11 @@ body>video {
     z-index: -1;
 }
 .courses1 {
-    background-image: url(/img/hero-4.avif);
+    background-image: url(/img/hero-4.jpg);
 }
 
 .courses2 {
-    background-image: url(/img/home-lessons.avif);
+    background-image: url(/img/home-lessons.jpg);
 }
 
 .courses>h1 {
@@ -344,7 +345,7 @@ body>video {
 }
 
 #greenband {
-    padding: 1vw;
+    padding: 1vw 0vw;
     width: 100%;
     height: 35vh;
     display: flex;
@@ -355,10 +356,9 @@ body>video {
     overflow: hidden;
 }
 
-#greenband img {
+#greenband svg {
     width: 13vw;
     height: 50vh;
-    object-fit: cover;
     opacity: .4;
 }
 
@@ -589,11 +589,13 @@ body>video {
     font-family: montbold;
 }
 
-#page5 .textbox img {
+#page5 .textbox svg,.textbox img{
     width: 55px;
     position: absolute;
 }
-
+#page5 .textbox svg,.textbox img{
+    width: 4vw;
+}
 #comma1 {
     left: 14%;
     top: 30%;
@@ -685,9 +687,10 @@ body>video {
     flex-direction: column;
 }
 
-.columns img {
+.columns svg {
     width: max-content;
     height: 7vw;
+    cursor: pointer;
 }
 
 .columns h2 {
@@ -765,12 +768,15 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10px;
 }
 @media(max-width : 600px){
+    .cursor{
+        display: none;
+    }
     #navbar{
         height: 20vw;
         padding: 0vw 5vw;
         justify-content: space-between;
     }
-    #navbar img{
+    #navbar svg{
         height: max-content;
         height: 12vw;
         margin-top: 5vw;
@@ -847,8 +853,8 @@ body::-webkit-scrollbar-thumb {
     #greenband{
         height: 50vw;
     }
-    #greenband img{
-        height: 60vw ;
+    #greenband svg{
+        width: 18vw;
     }
     #greenband h1{
         font-size: 3.2vw;
@@ -908,6 +914,9 @@ body::-webkit-scrollbar-thumb {
     #page5 .textbox img{
         width: 30px;
     }
+    #page5 .textbox svg{
+        width: 30px;
+    }
     .lessons-div{
         flex-direction: column;
     }
@@ -939,7 +948,7 @@ body::-webkit-scrollbar-thumb {
     .column2{
         margin: 0;
     }
-    .columns img{
+    .columns svg{
         height: 15vw;
     }
     .columns h2{

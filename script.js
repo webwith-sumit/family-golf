@@ -238,6 +238,18 @@ headlink.forEach(function (elem) {
 
     })
 })
+document.querySelector("#footer").addEventListener("mouseenter", function(){
+        cursor.style.height = "0px"
+        cursor.style.border = "1.5px solid white"
+        cursor.style.backgroundColor = "transparent"
+        cursor.style.boxShadow = "none"
+})
+document.querySelector("#footer").addEventListener("mouseleave", function(){
+        cursor.style.height = "20px",
+        cursor.style.border = "0"
+        cursor.style.backgroundColor = "#95C11E"
+        cursor.style.boxShadow = "0px 0px 200px 100px #96c11e6a"
+})
 var headlink = document.querySelectorAll("#navbar h4, #navbar button")
 headlink.forEach(function (elem) {
     elem.addEventListener("mouseenter", function () {
