@@ -42,9 +42,8 @@ body {
 }
 
 #navbar h4 {
-    font-family: montserrat;
-    font-size: 1.1vw;
-    font-weight: 100;
+    font-size: 1.2vw;
+    font-weight: 400;
     cursor: pointer;
     white-space: nowrap;
 }
@@ -133,7 +132,6 @@ body>video {
 }
 
 #page1 h1 {
-    font-family: montbold;
     font-size: 8vw;
     font-weight: 900;
     position: relative;
@@ -153,16 +151,16 @@ body>video {
 }
 
 #page1 h3 {
-    font-family: montbold;
-    font-size: 2vw;
+    font-size: 2.2vw;
+    letter-spacing: .5px;
     font-weight: 700;
 }
 
 #page1 p {
-    font-family: montserrat;
+    letter-spacing: .5px;
     width: 100%;
-    font-size: 1.3vw;
-    font-weight: 100;
+    font-size: 1.35vw;
+    font-weight: 300;
     line-height: 1.5vw;
 }
 
@@ -223,7 +221,6 @@ body>video {
 
 .container h1 {
     font-size: 3.5vw;
-    font-family: montbold;
     font-weight: 900;
 }
 
@@ -333,8 +330,8 @@ body>video {
 
 .courses h1 {
     color: black;
-    font-family: montbold;
     font-size: 2.2vw;
+    font-weight: 800;
 }
 
 .courses p {
@@ -368,9 +365,9 @@ body>video {
 }
 
 #greenband h1 {
-    font-family: montbold;
     color: black;
-    font-size: 1.8vw;
+    font-size: 1.9vw;
+    font-weight: 800;
 }
 
 #page4 {
@@ -383,7 +380,6 @@ body>video {
 }
 
 .swiper{
-    /* background-color: lightpink; */
     width: 40vw;
     height: 28vw;
     border-radius: 10px;
@@ -456,14 +452,14 @@ body>video {
 }
 
 .righttext h1 {
-    font-family: montbold;
     font-size: 3vw;
+    font-weight: 800;
 }
 
 .righttext p {
-    font-family: montserrat;
+    letter-spacing: .5px;
     font-size: 1.5vw;
-    font-weight: 100;
+    font-weight: 300;
     width: 99%;
     line-height: 2.5vw;
 }
@@ -475,7 +471,6 @@ body>video {
     border: 3px solid #95C11E;
     background-color: transparent;
     background-color: black;
-    font-family: montserrat;
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -514,8 +509,7 @@ body>video {
     position: absolute;
     bottom: -5%;
     right: 10%;
-    font-family: montbold;
-    font-weight: 500;
+    font-weight: 800;
 }
 
 .imgbox {
@@ -585,9 +579,8 @@ body>video {
 .textbox h1 {
     font-size: 1.8vw;
     line-height: 2.7vw;
-    font-weight: 100;
+    font-weight: 800;
     width: 88%;
-    font-family: montbold;
 }
 
 #page5 .textbox svg,.textbox img{
@@ -644,7 +637,7 @@ body>video {
     position: absolute;
     left: 0;
     top: 0;
-    font-family: montbold;
+    font-weight: 800;
     font-size: 2vw;
     transition: color ease .2s;
     transition: background-color ease .2s;
@@ -695,8 +688,7 @@ body>video {
 }
 
 .columns h2 {
-    font-family: montbold;
-    font-weight: 100;
+    font-weight: 800;
     color: black;
     font-size: 1.8vw;
     line-height: 2.5vw;
@@ -711,7 +703,7 @@ body>video {
 }
 
 .columns #direction {
-    font-weight: 100;
+    font-weight: 800;
     font-size: 1.5vw;
 }
 
@@ -737,7 +729,6 @@ body>video {
     color: black;
     font-size: 1.05vw;
     font-weight: 200;
-    font-family: montserrat;
     padding-left: 10vw;
 }
 
@@ -745,7 +736,6 @@ body>video {
     color: black;
     font-size: 1vw;
     font-weight: 200;
-    font-family: montserrat;
     position: absolute;
     right: 5%;
     bottom: 5%;
@@ -847,7 +837,7 @@ body::-webkit-scrollbar-thumb {
         font-size: 5vw;
     }
     .courses h1{
-        font-size: 6vw;
+        font-size: 7.5vw;
         white-space: nowrap;
     }
     .courses p{
@@ -861,7 +851,7 @@ body::-webkit-scrollbar-thumb {
         width: 18vw;
     }
     #greenband h1{
-        font-size: 3.2vw;
+        font-size: 4vw;
     }
     #page4{
         flex-direction: column;
