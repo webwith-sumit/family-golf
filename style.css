@@ -274,7 +274,6 @@ body>video {
     border-radius: 20px;
     position: relative;
     z-index: 2;
-    background-image: url(/img/home-toptracer.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -287,13 +286,15 @@ body>video {
     top: -10%;
     z-index: -1;
 }
+.course0{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
 .courses1 {
-    z-index: 1;
-    background-image: url(/img/hero-4.webp);
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&ssl=1);
 }
 
 .courses2 {
-    background-image: url(/img/home-lessons.webp);
+    background-image: url(https://plus.unsplash.com/premium_photo-1683120721239-ac9a0a3b558c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
 
 .courses>h1 {
